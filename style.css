@@ -6,16 +6,31 @@ coloque nas sessões indicadas*/
     /*Insira a variavel das outras cores inspecionando o modelo do figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+   --cor-de-link: #464646;
+   --cor-de-link-2: #fff;
+   --gradient-1: #000000;
+   --gradient-photo: #8a35c8;
+   --gradient-photo-2: #18c063;
+   --gradient-photo-3: #00eea2;
+   --cor-btn-repo: #2a7ae4;
+   --btn-repo-hover: #d4e4fa;
+   --btn-demo-hover: #5595E9;
+   --fundo-azul-claro: #EAF2FD;
+   --cor-rodape: #EDEDED;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     line-height: 1;
+    width: 100%;
+    max-width: 1120px;
+    color: #000;
 }
 ol, ul,li {
     list-style: none;
@@ -40,59 +55,336 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sessão Menu*/
 
-section.menu{
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.menu header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu header img {
+  width: 24px;
+  height: 24px;
+}
+
+.menu .menu__list {
+  display: flex;
+  gap: 32px;
 }
 
 /*Sessão Title*/
+.title {
+  text-align: left;
+  display: flex;
+  margin-bottom: 20px;
+}
 
-section.title{
+.title__bio {
+  font-size: 52px;
+}
 
+.title__subsection {
+  font-size: 22px;
+}
+
+.title .title__div{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title .title__div .title__profile {
+  border-radius: 50%;
+  width: 368px;
+  height: 368px;
+}
+
+.title .title__div .title__profile.sombra__interna {
+  background: linear-gradient(to right, var(--gradient-photo), var(--gradient-photo-2), var(--gradient-photo-3));
+  animation: gradient-animation 5s ease infinite;
+}
+
+.title .title__div .title__container .title__network {
+  display: flex;
+  margin: 0;
+  gap: 16px;
+  text-align: left;
+}
+
+.title .title__div .title__container .title__network .title__network__item {
+  border: 1px solid orangered;
+  align-self: flex-start;
+}
+
+.title__network__item a {
+  text-align: left;
 }
 
 /*Sessão About*/
 
-section.about{
+.about{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fundo-azul-claro);
+  padding: 24px 0;
+  margin-top: 20px;
+}
 
+.about .about__container .about__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.about .about__container .about__paragraph {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*Sessão Skills*/
+
+.skills {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.skills .skills__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.skills .skills__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Sessão Hobbies*/
 
-section.hobbies{
-    
+.hobbies {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies .hobbies__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.hobbies .hobbies__line {
+  display: flex;
+  justify-content: center;
+}
+
+.hobbies__name {
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* Experiência Acadêmica*/
+.academic {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fundo-azul-claro);
+  padding: 24px 0;
+}
+.academic .academic__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
 
-section.academic{
+.academic .academic__courses {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
 
+.academic__courses__item__title {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.academic__courses__item__subtitle {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 /* experiência*/
+.experience {
+  display: flex;
+  flex-flow: column wrap;
+}
 
-section.experience{
+.experience__section {
+  display: flex;
+  flex-flow: column wrap;
+}
 
+.experience__section__title {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+
+.experiencie__box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.experiencie__box__reverse {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.experience__img {
+  width: 752px;
+  height: 406px;
+}
+
+.experience__info .experience__title {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.experience__info .experience__text {
+  font-size: 16px;
+}
+
+.experience__description {
+  display: flex;
+  gap: 10px;
+}
+
+.experience__description .experience__repo .experiencia__botao--repo {
+  background-color: transparent;
+  border: 1px solid var(--cor-btn-repo);
+  color: var(--cor-btn-repo);
+  padding: 10px;
+}
+
+.experiencia__botao--repo:hover {
+  background-color: var(--btn-repo-hover);
+}
+
+.experience__description .experience__demo .experiencia__botao--demo {
+  background-color: var(--cor-btn-repo);
+  color: var(--cor-de-link-2);
+  border: none;
+  padding: 10px;
+}
+
+.experiencia__botao--demo:hover {
+  background-color: var(--btn-demo-hover);
 }
 
 /*Contato*/
 
-section.formcontato{
+.formcontato{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: var(--fundo-azul-claro);
+}
 
+.formcontato__img {
+  width: 463px;
+  height: 593px;
+}
+
+.formcontato__contacto {
+  display: flex;
+  gap: 8px;
+}
+
+.formcontato__text .formcontato__title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.formcontato__subtext {
+  font-size: 16px;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formcontato__input {
+  border: none;
+  background-color: var(--cor-de-fundo);
+  padding: 12px;
+  -webkit-box-shadow: 1px 3px 14px -3px var(--gradient-1); 
+  box-shadow: 1px 3px 14px -3px var(--gradient-1);
+}
+
+.formcontato__textarea {
+  border: none;
+  background-color: var(--cor-de-fundo);
+  -webkit-box-shadow: 1px 3px 14px -3px var(--gradient-1); 
+  box-shadow: 1px 3px 14px -3px var(--gradient-1);
+}
+
+.formcontato__botao {
+  padding: 16px;
+  width: 165px;
+  border: none;
+  background-color: var(--cor-btn-repo);
+  cursor: pointer;
+  color: var(--cor-de-link-2);
+}
+
+.formcontato__botao:hover {
+  background-color: var(--btn-demo-hover);
 }
 
 /*footeer*/
 
 section.footer{
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-rodape);
+  margin-top: 16px;
+  text-align: center;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
 /* Menu */
+  .menu .menu__list:nth-child(1),
+  .menu .menu__list:nth-child(2),
+  .menu .menu__list:nth-child(3),
+  .menu .menu__list:nth-child(4),
+  .menu .menu__list:nth-child(5)
+  {
+    display: none;
+  }
 
 /*title*/
 
@@ -103,27 +395,130 @@ utilize como referência os breakpoints @media abaixo*/
 /*Experiências acadêmicas*/
 
 /*Expeirência profissional*/
+  .experiencie__box {
+    flex-flow: column wrap;
+  }
+  
+  .experiencie__box__reverse {
+    flex-flow: column wrap;
+  }
 
+
+  .formcontato {
+    flex-flow: column wrap;
+  }
+  
+  .formcontato__img {
+    display: none;
+  }
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 425px) {
 
 /*Menu*/
+.menu .menu__list:nth-child(1),
+.menu .menu__list:nth-child(2),
+.menu .menu__list:nth-child(3),
+.menu .menu__list:nth-child(4),
+.menu .menu__list:nth-child(5)
+{
+  display: none;
+}
+
 
 /*Titulo*/
+.title__bio {
+  font-size: 20px;
+}
+
+.title__subsection {
+  font-size: 14px;
+}
+
+.title .title__div {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.title .title__div .title__profile {
+  width: 98px;
+  height: 98px;
+}
+
+.title .title__div .title__container .title__network {
+  justify-content: flex-start;
+}
+
+.title__network a {
+  font-size: 16px;
+}
 
 /*Sessão sobre*/
 
+.about .about__container .about__title {
+  font-size: 22px;
+}
+
+.about .about__container .about__paragraph {
+  font-size: 14px;
+}
+
 /*Skills*/
 
+.skills .skills__title {
+  font-size: 22px;
+}
+
 /*Hobbies*/
+.hobbies .hobbies__title {
+  font-size: 22px;
+}
  
 /*Formação Acadêmica*/
+.academic .academic__title {
+  font-size: 22px;
+}
 
 /*Experiência Profissional*/
+.experience__section__title {
+  font-size: 22px;
+}
+
+.experiencie__box {
+  flex-flow: column wrap;
+}
+
+.experiencie__box__reverse {
+  flex-flow: column wrap;
+}
+
+.experience__img {
+  width: 100%;
+  height: 210px;
+}
+
+.experience__info .experience__title {
+  font-size: 16px;
+}
+
+.experience__info .experience__text {
+  font-size: 14px;
+}
 
  /*Contato*/
+.formcontato {
+  flex-flow: column wrap;
+}
+
+.formcontato__img {
+  display: none;
+}
+ 
+ .formcontato__text .formcontato__title {
+  font-size: 22px;
+ }
 
 /*Footer*/
 
