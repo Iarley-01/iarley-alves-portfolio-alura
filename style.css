@@ -388,13 +388,43 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*title*/
 
-/*Skills*/
+.title__bio {
+  font-size: 22px;
+}
 
-/*Hobbies*/
+.title__subsection {
+  font-size: 16px;
+}
 
-/*Experiências acadêmicas*/
+.title .title__div .title__profile {
+  width: 146px;
+  height: 146px;
+}
 
-/*Expeirência profissional*/
+.about .about__container .about__title {
+  font-size: 22px;
+}
+
+.about .about__container .about__paragraph {
+  font-size: 14px;
+}
+
+.skills .skills__title {
+  font-size: 22px;
+}
+
+.hobbies .hobbies__title {
+  font-size: 22px;
+}
+ 
+.academic .academic__title {
+  font-size: 22px;
+}
+
+.experience__section__title {
+  font-size: 22px;
+}
+
   .experiencie__box {
     flex-flow: column wrap;
   }
@@ -403,6 +433,12 @@ utilize como referência os breakpoints @media abaixo*/
     flex-flow: column wrap;
   }
 
+
+
+.experience__img {
+  max-width: 704px;
+  height: 320px;
+}
 
   .formcontato {
     flex-flow: column wrap;
@@ -414,7 +450,7 @@ utilize como referência os breakpoints @media abaixo*/
 }
 
 /*Mobile*/
-@media (max-width: 425px) {
+@media (max-width: 480px) {
 
 /*Menu*/
 .menu .menu__list:nth-child(1),
